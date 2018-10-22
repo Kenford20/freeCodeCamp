@@ -21,13 +21,13 @@ PS - Here is another way to bind `this` into a function
 ```
 <input onChange = {this.handleChange.bind(this)}/>
 ```
-But this just won't serve your purpose. Although you might feel that its working. So what's happening here is text updates from from the browser not the state. So to correct this we'll add a `value` attribute and set it to `this.state.input` to the input element which will make the input get controlled by state.
+But this just won't serve your purpose. Although you might feel that its working. So what's happening here is text updates from the browser not the state. So to correct this we'll add a `value` attribute and set it to `this.state.input` to the input element which will make the input get controlled by state.
 
 ```
 <input value = {this.state.input} onChange = {this.handleChange.bind(this)}/>
 ```
 
-It can be a bit hard to digest but to make things further clear try removing the entire `onChange` thing so your code looks like this
+It can be a bit hard to digest but to make things further clear try removing the entire `onChange` attribute so your code looks like this
 ```
 <input value = {this.state.input}/>
 ```
